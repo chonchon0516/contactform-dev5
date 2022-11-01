@@ -1,6 +1,6 @@
 <?php
 $title = filter_input(INPUT_POST, 'title');
-$email = filter_input(INPUT_POST, 'mail');
+$email = filter_input(INPUT_POST, 'email');
 $content = filter_input(INPUT_POST, 'content');
 
 if (empty($title) || empty($email) || empty($content)) {
@@ -17,7 +17,7 @@ if (!empty($title) && !empty($email) && !empty($content)) {
     $dbUserName = 'root';
     $dbPassword = 'password';
     $pdo = new PDO(
-        'mysql:dbname=contactform;host=mysql;charset=utf8',
+        'mysql:dbname=tqcontactform;host=mysql;charset=utf8',
         $dbUserName,
         $dbPassword
     );
